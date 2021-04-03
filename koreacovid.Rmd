@@ -57,17 +57,35 @@ basicCC + geom_bar(stat="identity", position = "dodge")
 ```
 
   
-In the observational study, males were more likely to die than females from COVID 19.
+In the observational study, males were more likely to die than females from COVID 19. 
 
 $H_A$ There is a relation between COVID 19 deaths in Korea, January - May 2020 and sex of the patient. 
   
 ## Numerical results
 
+```{r}
+table1 <- xtabs(~result + Sex, data=kRdata)
+rowPerc(table1)
+colPerc(table1)
+```
+
+The tables show that males were more likely to die than females from to COVID 19. 
+
 
 ## Inferential results 
 
+```{r}
+chisq.test(table1)
+chisqtestGC(table1)
+fisher.test(table1)
+```
 
+We reject the null hypothesis because the pvalue is 0.001. 
 
+The odds ratio shows that if you are a male, you are 2.3 times more likely to die from COVID 19 than females. 
 
 ## Conclusions
 
+In conclusion, we reject the null hypothesis because the results from the data show there is a relationship between sex and those who die from COVID 19. 
+
+$H_A$ There is a relation between COVID 19 deaths in Korea, January - May 2020 and sex of the patient. 
