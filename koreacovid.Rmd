@@ -84,8 +84,12 @@ We reject the null hypothesis because the pvalue is 0.001.
 
 The odds ratio shows that if you are a male, you are 2.3 times more likely to die from COVID 19 than females. 
 
+In the fisher exact test, the confidence interval is between 1.4 and 3.9, which does not include 1. 
+
 ## Conclusions
 
 In conclusion, we reject the null hypothesis because the results from the data show there is a relationship between sex and those who die from COVID 19. 
 
 $H_A$ There is a relation between COVID 19 deaths in Korea, January - May 2020 and sex of the patient. 
+
+The true odds value is not equal to 1. The confidence interval is between 1.4 and 3.9. 
